@@ -1,0 +1,23 @@
+---
+title: "data_products_week_3"
+author: "Ryan Morton"
+date: "April 24, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(plotly)
+```
+
+## Plotly Example: Iris Dataset
+
+```{r iris}
+set.seed(123)
+
+df <- iris
+
+fit <- lm(Sepal.Width ~ Sepal.Length:Species, data = df)
+
+plot_ly(df, x = ~Sepal.Length, y = ~Sepal.Width, color = ~Species, type = "scatter", mode = "markers") %>%
+  add_lines(x = ~Sepal.Length, y = fitted(fit))
