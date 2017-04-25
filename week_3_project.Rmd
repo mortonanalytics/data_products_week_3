@@ -1,12 +1,12 @@
 ---
-title: "data_products_week_3"
+title: "Fitting Linear Models to Iris Species"
 author: "Ryan Morton"
 date: "April 24, 2017"
-output: html_document
+output: slidy_presentation
 ---
 
 ```{r setup, include=FALSE, message=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 library(plotly)
 ```
 
